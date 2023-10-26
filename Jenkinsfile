@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build app1') {
             steps {
-                sh 'bazel run //src/app1/hello'
+                sh 'bazel query //src/app1'
             }
         }
     }
