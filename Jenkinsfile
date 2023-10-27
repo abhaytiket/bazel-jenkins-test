@@ -9,7 +9,7 @@ pipeline {
         stage('build app1') {
             steps {
                 sh 'bazel --version'
-                sh 'bazel build //src/app1'
+                sh 'bazel run --script_path=//src/app1'
             }
         }
     }
