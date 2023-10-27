@@ -1,15 +1,15 @@
 pipeline {
     agent { 
         docker { 
-            image 'gcr.io/bazel-public/bazel:6.4.0' 
+            image 'sychonet/bazelisk:latest' 
         } 
     }
     
     stages {
         stage('build') {
             steps {
-                sh 'bazel --version'
-                sh 'bazel build //src/app1/hello'
+                sh 'bazelisk --version'
+                sh 'bazelisk build //src/app1/hello'
             }
         }
     }
