@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('build app1') {
             steps {
-                sh 'bazel query //src/app1'
+                sh 'bazel build //src/app1'
             }
         }
     }
