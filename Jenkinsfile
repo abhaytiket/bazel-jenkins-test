@@ -4,10 +4,12 @@ pipeline {
             image 'gcr.io/bazel-public/bazel:6.4.0' 
         } 
     }
+    
     stages {
-        stage('build app1') {
+        stage('build') {
             steps {
-                sh 'docker pull maven:3.5.0'
+                sh 'bazel --version'
+                sh 'bazel build //src/app1/hello'
             }
         }
     }
