@@ -9,7 +9,7 @@ pipeline {
         stage('build app1') {
             steps {
                 sh 'bazel --version'
-                sh 'bazel run --script_path=//src/app1'
+                sh 'bazel --noblock_for_lock run --script_path=//src/app1'
             }
         }
     }
