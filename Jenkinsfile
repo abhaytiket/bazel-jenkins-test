@@ -6,8 +6,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'bazelisk --version'
-                sh 'bazelisk build //src/app1/hello'
+                sh 'echo $USER'
             }
         }
     }
