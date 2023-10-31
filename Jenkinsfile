@@ -1,14 +1,11 @@
 pipeline {
     agent { 
-        docker { 
-            image 'sychonet/bazelisk:latest' 
-        } 
+        label "bazelisk-agent"
     }
     
     stages {
         stage('build') {
             steps {
-                sh 'whoami'
                 sh 'bazelisk --version'
                 sh 'bazelisk build //src/app1/hello'
             }
