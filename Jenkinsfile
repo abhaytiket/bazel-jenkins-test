@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'echo $USER'
+                sh 'bazelisk --version'
             }
         }
     }
