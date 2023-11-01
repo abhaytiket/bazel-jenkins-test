@@ -1,6 +1,6 @@
 pipeline {
     agent { 
-        label "bazelisk-agent-1"
+        label 'bazelisk-agent'
     }
     
     stages {
