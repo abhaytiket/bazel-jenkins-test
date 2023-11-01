@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'echo $HOSTNAME'
+                sh 'echo $USER'
             }
         }
     }
