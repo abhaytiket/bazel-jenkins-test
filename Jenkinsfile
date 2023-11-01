@@ -1,12 +1,12 @@
 pipeline {
     agent { 
-        label "bazelisk-agent"
+        label "bazelisk-agent-1"
     }
     
     stages {
         stage('build') {
             steps {
-                sh 'echo $USER'
+                sh 'bazelisk --version'
             }
         }
     }
