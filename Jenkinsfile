@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'bazelisk --version'
+                sh 'echo $HOSTNAME'
             }
         }
     }
